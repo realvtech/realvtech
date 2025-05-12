@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "Company Profile",
+    "description": "Pengerjaan website bisnis dengan tampilan minimalis dan responsif.",
+    "categories": ["website"],
+    "imgUrl": "images/proyek-website.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+  {
+    "id": 2,
+    "title": "Vee Tech",
+    "description": "Pengerjaan website bisnis dengan tampilan minimalis dan responsif.",
+    "categories": ["website"],
+    "imgUrl": "images/proyek-website2.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+   {
+    "id": 3,
+    "title": "Indo brand",
+    "description": "Pengerjaan website bisnis dengan tampilan minimalis dan responsif.",
+    "categories": ["website"],
+    "imgUrl": "images/proyek-website3.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+  {
+    "id": 4,
+    "title": "Proyek Desain",
+    "description": "Karya desain grafis kreatif untuk branding bisnis.",
+    "categories": ["desain"],
+     "imgUrl": "images/proyek-desain.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+  {
+    "id": 5,
+    "title": "Proyek Desain",
+    "description": "Karya desain grafis kreatif untuk branding bisnis.",
+    "categories": ["desain"],
+     "imgUrl": "images/proyek-desain2.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+  {
+    "id": 6,
+    "title": "Proyek Desain",
+    "description": "Karya desain grafis kreatif untuk branding bisnis.",
+    "categories": ["desain"],
+     "imgUrl": "images/proyek-desain3.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+  {
+    "id": 7,
+    "title": "Proyek Animasi",
+    "description": "Animasi dinamis yang penuh imajinasi.",
+    "categories": ["animasi"],
+     "imgUrl": "images/proyek-animasi.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+{
+    "id": 8,
+    "title": "Proyek Animasi",
+    "description": "Animasi dinamis yang penuh imajinasi.",
+    "categories": ["animasi"],
+     "imgUrl": "images/proyek-animasi2.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+{
+    "id": 9,
+    "title": "Proyek Animasi",
+    "description": "Animasi dinamis yang penuh imajinasi.",
+    "categories": ["animasi"],
+     "imgUrl": "images/proyek-animasi3.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+  {
+    "id": 10,
+    "title": "Fintech",
+    "description": "Aplikasi mobile intuitif dan user-friendly.",
+    "categories": ["aplikasi"],
+     "imgUrl": "images/proyek-app.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+   {
+    "id": 11,
+    "title": "Tasks App",
+    "description": "Aplikasi mobile intuitif dan user-friendly.",
+    "categories": ["aplikasi"],
+     "imgUrl": "images/proyek-app2.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+   {
+    "id": 12,
+    "title": "UMKM E-commerce",
+    "description": "Aplikasi mobile intuitif dan user-friendly.",
+    "categories": ["aplikasi"],
+     "imgUrl": "images/proyek-app3.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+  {
+    "id": 13,
+    "title": "Education Game",
+    "description": "Game interaktif yang menggabungkan hiburan dan edukasi.",
+    "categories": ["game"],
+     "imgUrl": "images/proyek-game.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+    {
+    "id": 14,
+    "title": "Rpg Game",
+    "description": "Game seru bagi yang suka genre adventure",
+    "categories": ["game"],
+     "imgUrl": "images/proyek-game2.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  },
+
+    {
+    "id": 15,
+    "title": "Sci-fi Game",
+    "description": "Game interaktif yang menggabungkan hiburan dan edukasi.",
+    "categories": ["game"],
+     "imgUrl": "images/proyek-game3.png",
+    "projectUrl": "https://contohwebsite.com/proyek-website"
+  }
+]

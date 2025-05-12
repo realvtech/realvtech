@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realvtech - Desain, Website, Animasi & Lainnya</title>
+  <meta name="description" content="Realvtech menyediakan layanan desain, website, animasi, aplikasi mobile, dan game dengan kualitas dan kreativitas tinggi.">
+  <meta name="keywords" content="desain, website, animasi, aplikasi, game, Realvtech">
+  <meta name="author" content="Realvtech">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <style>
+    /* Smooth scrolling behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow fixed w-full z-20 top-0 left-0">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <div class="text-2xl font-bold">Realvtech</div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#about" class="hover:text-gray-600">Tentang</a>
+          <a href="#portfolio" class="hover:text-gray-600">Portfolio</a>
+          <a href="#pricing" class="hover:text-gray-600">Pricelist</a>
+          <a href="#testimonials" class="hover:text-gray-600">Testimoni</a>
+          <a href="#contact" class="hover:text-gray-600">Kontak</a>
+        </div>
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button id="nav-toggle" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="nav-mobile" class="md:hidden hidden">
+        <ul class="flex flex-col space-y-2 pb-4">
+          <li><a href="#about" class="block px-4 py-2 hover:bg-gray-200">Tentang</a></li>
+          <li><a href="#portfolio" class="block px-4 py-2 hover:bg-gray-200">Portfolio</a></li>
+          <li><a href="#pricing" class="block px-4 py-2 hover:bg-gray-200">Pricelist</a></li>
+          <li><a href="#testimonials" class="block px-4 py-2 hover:bg-gray-200">Testimoni</a></li>
+          <li><a href="#contact" class="block px-4 py-2 hover:bg-gray-200">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Memberikan ruang agar konten tidak tertutup navbar -->
+  <div class="pt-20"></div>
+
+  <!-- Hero Section dengan Background Image dan Overlay -->
+<section 
+  class="relative h-screen flex items-center justify-center bg-cover bg-center" 
+  style="background-image: url('images/hero-bg.png');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-60"></div>
+  
+  <!-- Konten hero -->
+  <div class="relative z-10 text-center text-white px-4">
+    <h1 class="text-5xl font-bold mb-4">Realvtech</h1>
+    <p class="text-xl mb-6">Desain & Teknologi Kreatif</p>
+    <a href="#contact" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700 transition">
+      Hubungi Kami
+    </a>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto py-12 px-4" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="text-3xl font-bold text-center mb-6">Tentang Kami</h2>
+    <p class="text-center max-w-2xl mx-auto">
+      Kami adalah tim profesional yang menggabungkan kreativitas dengan teknologi untuk menghadirkan solusi digital terbaik bagi Anda.
+    </p>
+  </section>
+  
+  <!-- Portfolio Section dengan Filter Dinamis -->
+<section id="portfolio" class="bg-gray-200 py-12 px-4" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-3xl font-bold text-center mb-8">Portfolio</h2>
+  
+  <!-- Filter Buttons -->
+  <div class="flex justify-center gap-4 mb-8">
+    <button class="filter-btn bg-gray-800 text-white px-4 py-2 rounded" data-filter="all">Semua</button>
+    <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded" data-filter="desain">Desain</button>
+    <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded" data-filter="website">Website</button>
+    <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded" data-filter="animasi">Animasi</button>
+    <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded" data-filter="aplikasi">Aplikasi</button>
+    <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded" data-filter="game">Game</button>
+  </div>
+
+  <!-- Container untuk Menampilkan Portfolio Items -->
+  <div id="portfolio-container" class="flex flex-wrap justify-center gap-8">
+    <!-- Item akan di-render di sini -->
+  </div>
+</section>
+
+<!-- Pricelist Section -->
+<section id="pricing" class="container mx-auto py-12 px-4" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-3xl font-bold text-center mb-8">Pricelist</h2>
+
+  <!-- Grid Layout -->
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <!-- Jasa Pembuatan Website -->
+    <div class="border rounded-lg p-6 shadow-md">
+      <div class="border rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-duration="800">
+      <h3 class="text-xl font-semibold mb-4">Jasa Pembuatan Website</h3>
+      <ul class="space-y-4">
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Basic Website</h4>
+          <p>1–3 halaman, mobile-friendly, SEO dasar</p>
+          <p class="font-bold text-blue-600">Rp1.500.000</p>
+        </li>
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Business Website</h4>
+          <p>4–6 halaman, form kontak, integrasi WhatsApp</p>
+          <p class="font-bold text-blue-600">Rp2.500.000</p>
+        </li>
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Custom Website</h4>
+          <p>Desain khusus, CMS (WordPress, Laravel, dsb)</p>
+          <p class="font-bold text-blue-600">Mulai Rp4.500.000</p>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+    <!-- Jasa Desain Web UI/UX -->
+    <div class="border rounded-lg p-6 shadow-md">
+      <div class="border rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-duration="800">
+      <h3 class="text-xl font-semibold mb-4">Jasa Desain Web UI/UX</h3>
+      <ul class="space-y-4">
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Landing Page Design</h4>
+          <p>1 halaman (Figma/Adobe XD)</p>
+          <p class="font-bold text-blue-600">Rp200.000</p>
+        </li>
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Full Website Design</h4>
+          <p>Hingga 5 halaman (responsive + prototype)</p>
+          <p class="font-bold text-blue-600">Rp1.800.000</p>
+        </li>
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Custom UI/UX App</h4>
+          <p>Flow + Wireframe + High-Fidelity</p>
+          <p class="font-bold text-blue-600">Mulai Rp3.000.000</p>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+    <!-- Jasa Pembuatan Mobile App -->
+    <div class="border rounded-lg p-6 shadow-md">
+      <div class="border rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-duration="800">
+      <h3 class="text-xl font-semibold mb-4">Jasa Pembuatan Mobile App</h3>
+      <ul class="space-y-4">
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Prototype Only</h4>
+          <p>UI/UX + prototyping (Figma)</p>
+          <p class="font-bold text-blue-600">Rp2.000.000</p>
+        </li>
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Basic App</h4>
+          <p>Frontend only (Flutter/React Native) tanpa backend</p>
+          <p class="font-bold text-blue-600">Rp5.000.000</p>
+        </li>
+        <li class="border p-4 rounded bg-gray-100 hover:scale-105 transition duration-300">
+          <h4 class="font-semibold">Full App (MVP)</h4>
+          <p>Frontend + Backend (Firebase/Laravel API)</p>
+          <p class="font-bold text-blue-600">Mulai Rp8.500.000</p>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <!-- Testimonial Section -->
+<section id="testimonials" class="bg-gray-200 py-12 px-4" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-3xl font-bold text-center mb-8">Testimoni</h2>
+  <!-- Swiper Container -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <blockquote class="bg-white border rounded p-6">
+          <p class="italic">"Murah sih, padahal hasilnya bagus dan pengerjaan cepet. Makasih realvtech!"</p>
+          <footer class="mt-4 text-right font-semibold">- alvi</footer>
+        </blockquote>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <blockquote class="bg-white border rounded p-6">
+          <p class="italic">"Pelayanan gercep, admin fast respon, mantapp"</p>
+          <footer class="mt-4 text-right font-semibold">- pahlevi</footer>
+        </blockquote>
+      </div>
+      <!-- Tambahkan slide testimonial lain jika diperlukan -->
+    </div>
+    
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- Navigation Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<!-- Section Newsletter -->
+<section id="newsletter" class="py-12 bg-gray-100">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Jangan Lewatkan Update Kami</h2>
+    <p class="mb-6">Berlangganan newsletter kami untuk mendapatkan update, penawaran khusus, dan berita terbaru.</p>
+    <form id="newsletterForm" class="max-w-lg mx-auto flex flex-col md:flex-row gap-4">
+      <input type="email" name="email" placeholder="Masukkan email kamu" required class="w-full p-3 border rounded">
+      <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Langganan</button>
+    </form>
+    <p id="newsletterMessage" class="mt-4 text-green-600"></p>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="py-12 bg-white dark:bg-white-900" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Hubungi Kami</h2>
+    
+    <!-- Formulir Contact -->
+    <form id="contactForm" class="max-w-2xl mx-auto space-y-6">
+      
+      <!-- Baris Input Nama & Email -->
+      <div class="flex flex-col md:flex-row md:gap-6">
+        <div class="flex-1">
+          <label for="name" class="sr-only">Nama</label>
+          <input id="name" type="text" name="name" placeholder="Nama" required
+            class="w-full px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div class="flex-1 mt-4 md:mt-0">
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" type="email" name="email" placeholder="Email" required
+            class="w-full px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+      </div>
+      
+      <!-- Input Subjek -->
+      <div>
+        <label for="subject" class="sr-only">Subjek</label>
+        <input id="subject" type="text" name="subject" placeholder="Subjek" required
+          class="w-full px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+      
+      <!-- Pesan (Textarea) -->
+      <div>
+        <label for="message" class="sr-only">Pesan</label>
+        <textarea id="message" name="message" rows="5" placeholder="Pesan Anda" required
+          class="w-full px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+      </div>
+      
+      <!-- Tombol Kirim -->
+      <div class="text-center">
+        <button type="submit"
+          class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+          Kirim Pesan
+        </button>
+      </div>
+    </form>
+    
+    <!-- Area untuk Menampilkan Pesan Konfirmasi -->
+    <p id="contactFormMessage" class="mt-4 text-center text-green-600"></p>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center" data-aos="fade-up" data-aos-duration="1000">
+    <p>&copy; 2025 Realvtech - Semua Hak Dilindungi</p>
+  </footer>
+
+  <a href="https://wa.me/6281232044165?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda!" 
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat via WhatsApp"
+   class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 flex items-center justify-center rounded-full shadow-lg hover:bg-green-600 transition z-50">
+  <!-- Icon WhatsApp (SVG) -->
+ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+</a>
+
+
+  <!-- JavaScript untuk Navbar Toggle -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMobile = document.getElementById('nav-mobile');
+
+    navToggle.addEventListener('click', function () {
+      navMobile.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- AOS JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Sertakan SwiperJS sebelum penutup tag </body> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Hapus kelas aktif dari semua tombol
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-gray-800', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-800');
+      });
+      
+      // Tambahkan styling aktif pada tombol yang diklik
+      button.classList.add('bg-gray-800', 'text-white');
+      button.classList.remove('bg-gray-200', 'text-gray-800');
+
+      // Ambil kategori filter dari tombol yang diklik
+      const filterCategory = button.getAttribute('data-filter');
+
+      portfolioItems.forEach(item => {
+        // Dapatkan kategori item, pastikan untuk mengkonversinya menjadi array (dipisahkan oleh spasi)
+        const itemCategories = item.getAttribute('data-category').split(" ");
+        // Jika filter "semua" atau item memiliki kategori yang sesuai, tampilkan item. Jika tidak, sembunyikan.
+        if (filterCategory === 'all' || itemCategories.includes(filterCategory)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Fetch data portfolio dari file JSON
+    fetch('portfolio.json')
+      .then(response => response.json())
+      .then(data => {
+        renderPortfolioItems(data);
+        AOS.refresh(); // Refresh AOS untuk animasi pada elemen yang baru ditambahkan
+      })
+      .catch(error => console.error("Error fetching portfolio data:", error));
+
+    // Render portfolio items ke dalam container
+   function renderPortfolioItems(items) {
+  const container = document.getElementById("portfolio-container");
+  container.innerHTML = ""; // Pastikan container kosong
+  items.forEach(item => {
+    const categories = item.categories.join(" ");
+    const card = document.createElement("div");
+    card.className = "portfolio-item bg-white border rounded p-6 w-80 text-center";
+    card.setAttribute("data-category", categories);
+    card.setAttribute("data-aos", "fade-up");
+    card.setAttribute("data-aos-duration", "800");
+    
+
+    // Buat tag <a> sebagai pembungkus gambar dengan atribut untuk GLightbox
+  card.innerHTML = `
+  <a href="${item.imgUrl}" class="glightbox" data-gallery="portfolio" data-title="${item.title}">
+    <img src="${item.imgUrl}" alt="${item.title}" loading="lazy" class="w-full mb-4 rounded">
+  </a>
+  <h3 class="text-xl font-semibold mb-2">${item.title}</h3>
+  <p>${item.description}</p>
+  <a href="${item.projectUrl}" target="_blank" class="mt-2 inline-block text-blue-600 hover:underline">Lihat Detail</a>
+`
+
+    container.appendChild(card);
+  });
+
+  // Inisialisasi ulang GLightbox setelah konten baru dirender
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+  });
+}
+
+    // Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update styling tombol (aktif/nonaktif)
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-gray-800', 'text-white');
+          btn.classList.add('bg-gray-200', 'text-gray-800');
+        });
+        button.classList.add('bg-gray-800', 'text-white');
+        button.classList.remove('bg-gray-200', 'text-gray-800');
+
+        const filterCategory = button.getAttribute('data-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        portfolioItems.forEach(item => {
+          const itemCategories = item.getAttribute('data-category').split(" ");
+          if (filterCategory === 'all' || itemCategories.includes(filterCategory)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Contoh sederhana: hanya menampilkan pesan sukses. Biasanya, kamu akan mengirim data ke API eksternal.
+    document.getElementById('newsletterMessage').textContent = 
+      "Terima kasih telah berlangganan!";
+    // Reset form
+    e.target.reset();
+  });
+</script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Di sini biasanya kamu akan melakukan AJAX atau API call untuk mengirim data formulir.
+    const messageEl = document.getElementById('contactFormMessage');
+    messageEl.textContent = "Terima kasih, pesanmu telah terkirim!";
+    
+    // Reset form setelah beberapa detik (opsional)
+    setTimeout(() => {
+      e.target.reset();
+      messageEl.textContent = "";
+    }, 3000);
+  });
+</script>
+</body>
+</html>
