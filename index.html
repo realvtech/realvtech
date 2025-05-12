@@ -304,12 +304,28 @@
 
   <!-- JavaScript untuk Navbar Toggle -->
   <script>
-    const navToggle = document.getElementById('nav-toggle');
-    const navMobile = document.getElementById('nav-mobile');
+  const navToggle = document.getElementById("nav-toggle");
+  const navMobile = document.getElementById("nav-mobile");
 
-    navToggle.addEventListener('click', function () {
-      navMobile.classList.toggle('hidden');
-    });
+  navToggle.addEventListener("click", (event) => {
+    event.stopPropagation(); // Mencegah pemicu di elemen lain
+    navMobile.classList.toggle("hidden");
+  });
+
+     // Toggle Floating WhatsApp Button
+    const whatsappButton = document.getElementById("whatsapp-btn");
+
+  document.addEventListener("click", (event) => {
+    if (!whatsappButton.contains(event.target)) {
+      whatsappButton.classList.remove("hidden"); // Pastikan tetap muncul
+    }
+  });
+  // Pastikan klik luar tidak memengaruhi tombol
+  document.addEventListener("click", (event) => {
+    if (!navToggle.contains(event.target) && !navMobile.contains(event.target)) {
+      navMobile.classList.add("hidden"); // Menutup menu hanya jika klik terjadi di luar menu
+    }
+  });
   </script>
 
   <!-- AOS JavaScript -->
